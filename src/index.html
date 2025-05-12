@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XI RPL - SMK Labschool Pekanbaru</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-slate-900 text-slate-100">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center">
+                            <span class="text-slate-100 text-lg font-bold">XI</span>
+                        </div>
+                        <span class="text-slate-100 text-lg font-bold">RPL</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="flex items-center">
+                    <button id="menuButton" class="text-slate-300 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobileMenu" class="hidden md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Home</a>
+                    <a href="#timeline" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Timeline</a>
+                    <a href="#gallery" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Gallery</a>
+                    <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">About</a>
+                    <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-slate-800 hover:bg-slate-700">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-24 pb-16 overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-800">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAzNGMwIDIuMjA5LTEuNzkxIDQtNCA0cy00LTEuNzkxLTQtNCAxLjc5MS00IDQtNCA0IDEuNzkxIDQgNHoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjA1Ii8+PC9nPjwvc3ZnPg==')] opacity-20"></div>
+        </div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <!-- Text Content -->
+                <div class="text-center lg:text-left">
+                    <h1 class="text-4xl font-bold text-white mb-4 leading-tight">
+                        Welcome to<br/>
+                        <span class="text-slate-300">XI Software Engineering</span>
+                    </h1>
+                    <p class="text-base text-slate-300 max-w-3xl mx-auto lg:mx-0 mb-6">
+                        A digital time capsule of our journey through code, creativity, and camaraderie. 
+                        Here, we preserve the laughter shared in debugging sessions, the triumphs of successful projects, 
+                        and the bonds formed in our shared passion for technology.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4">
+                        <a href="#timeline" class="bg-slate-800 text-white px-6 py-2 rounded-lg hover:bg-slate-700 transition-colors duration-200 font-medium">
+                            Our Journey
+                        </a>
+                        <a href="#gallery" class="bg-slate-700 text-white border-2 border-slate-600 px-6 py-2 rounded-lg hover:bg-slate-600 transition-colors duration-200 font-medium">
+                            Memory Lane
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+                    <img 
+                        src="../images/hero.jpg" 
+                        alt="XI RPL Class Photo" 
+                        class="w-full h-full object-cover object-center"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="py-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Our Journey</h2>
+            <div class="relative">
+                <!-- Vertical line for timeline (desktop & mobile) -->
+                <div class="absolute left-1/2 top-0 h-full w-1 bg-slate-700/40 -translate-x-1/2 z-0"></div>
+                <div class="space-y-16">
+                    <!-- Timeline Events -->
+                    <!-- Loop 10 dummy events -->
+                    <!-- Event 1 -->
+                    <div class="timeline-event group md:flex md:items-center md:justify-between relative z-10" style="animation-delay:0ms">
+                        <div class="md:w-1/2 md:pr-8 md:order-1 order-2">
+                            <div class="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700 relative">
+                                <div class="mb-4">
+                                    <img src="https://placehold.co/400x250?text=Event+1" alt="Event 1" class="rounded-lg w-full h-48 object-cover object-center shadow-md">
+                                </div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Event Title One</h3>
+                                <p class="text-slate-300 mb-2">This is a short description of the first event. You can replace this text with your own story or memory.</p>
+                                <p class="text-sm text-slate-400">January 2023</p>
+                                <!-- Line to next event -->
+                                <div class="absolute left-1/2 bottom-0 w-1 h-8 bg-slate-700/40 -translate-x-1/2 z-0 md:hidden"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-12 order-1">
+                            <div class="w-6 h-6 bg-slate-900 border-4 border-slate-700 rounded-full z-10"></div>
+                        </div>
+                    </div>
+                    <!-- Event 2 -->
+                    <div class="timeline-event group md:flex md:items-center md:justify-between relative z-10 flex-row-reverse" style="animation-delay:100ms">
+                        <div class="md:w-1/2 md:pl-8 md:order-2 order-2">
+                            <div class="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700 relative">
+                                <div class="mb-4">
+                                    <img src="https://placehold.co/400x250?text=Event+2" alt="Event 2" class="rounded-lg w-full h-48 object-cover object-center shadow-md">
+                                </div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Event Title Two</h3>
+                                <p class="text-slate-300 mb-2">Another memorable event goes here. Feel free to write anything you want to remember.</p>
+                                <p class="text-sm text-slate-400">February 2023</p>
+                                <div class="absolute left-1/2 bottom-0 w-1 h-8 bg-slate-700/40 -translate-x-1/2 z-0 md:hidden"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-12 order-1">
+                            <div class="w-6 h-6 bg-slate-900 border-4 border-slate-700 rounded-full z-10"></div>
+                        </div>
+                    </div>
+                    <!-- Event 3 -->
+                    <div class="timeline-event group md:flex md:items-center md:justify-between relative z-10" style="animation-delay:200ms">
+                        <div class="md:w-1/2 md:pr-8 md:order-1 order-2">
+                            <div class="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700 relative">
+                                <div class="mb-4">
+                                    <img src="https://placehold.co/400x250?text=Event+3" alt="Event 3" class="rounded-lg w-full h-48 object-cover object-center shadow-md">
+                                </div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Event Title Three</h3>
+                                <p class="text-slate-300 mb-2">Write your own story for this event. You can add as many events as you want!</p>
+                                <p class="text-sm text-slate-400">March 2023</p>
+                                <div class="absolute left-1/2 bottom-0 w-1 h-8 bg-slate-700/40 -translate-x-1/2 z-0 md:hidden"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-12 order-1">
+                            <div class="w-6 h-6 bg-slate-900 border-4 border-slate-700 rounded-full z-10"></div>
+                        </div>
+                    </div>
+                    <!-- Event 4 -->
+                    <div class="timeline-event group md:flex md:items-center md:justify-between relative z-10 flex-row-reverse" style="animation-delay:300ms">
+                        <div class="md:w-1/2 md:pl-8 md:order-2 order-2">
+                            <div class="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700 relative">
+                                <div class="mb-4">
+                                    <img src="https://placehold.co/400x250?text=Event+4" alt="Event 4" class="rounded-lg w-full h-48 object-cover object-center shadow-md">
+                                </div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Event Title Four</h3>
+                                <p class="text-slate-300 mb-2">A fun event with lots of memories. Replace this with your own story.</p>
+                                <p class="text-sm text-slate-400">April 2023</p>
+                                <div class="absolute left-1/2 bottom-0 w-1 h-8 bg-slate-700/40 -translate-x-1/2 z-0 md:hidden"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-12 order-1">
+                            <div class="w-6 h-6 bg-slate-900 border-4 border-slate-700 rounded-full z-10"></div>
+                        </div>
+                    </div>
+                    <!-- Event 5 -->
+                    <div class="timeline-event group md:flex md:items-center md:justify-between relative z-10" style="animation-delay:400ms">
+                        <div class="md:w-1/2 md:pr-8 md:order-1 order-2">
+                            <div class="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700 relative">
+                                <div class="mb-4">
+                                    <img src="https://placehold.co/400x250?text=Event+5" alt="Event 5" class="rounded-lg w-full h-48 object-cover object-center shadow-md">
+                                </div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Event Title Five</h3>
+                                <p class="text-slate-300 mb-2">Another event description goes here. Make it your own!</p>
+                                <p class="text-sm text-slate-400">May 2023</p>
+                                <div class="absolute left-1/2 bottom-0 w-1 h-8 bg-slate-700/40 -translate-x-1/2 z-0 md:hidden"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-12 order-1">
+                            <div class="w-6 h-6 bg-slate-900 border-4 border-slate-700 rounded-full z-10"></div>
+                        </div>
+                    </div>
+                    <!-- Event 6 -->
+                    <div class="timeline-event group md:flex md:items-center md:justify-between relative z-10 flex-row-reverse" style="animation-delay:500ms">
+                        <div class="md:w-1/2 md:pl-8 md:order-2 order-2">
+                            <div class="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700 relative">
+                                <div class="mb-4">
+                                    <img src="https://placehold.co/400x250?text=Event+6" alt="Event 6" class="rounded-lg w-full h-48 object-cover object-center shadow-md">
+                                </div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Event Title Six</h3>
+                                <p class="text-slate-300 mb-2">Describe your event here. You can add more details as you like.</p>
+                                <p class="text-sm text-slate-400">June 2023</p>
+                                <div class="absolute left-1/2 bottom-0 w-1 h-8 bg-slate-700/40 -translate-x-1/2 z-0 md:hidden"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-12 order-1">
+                            <div class="w-6 h-6 bg-slate-900 border-4 border-slate-700 rounded-full z-10"></div>
+                        </div>
+                    </div>
+                    <!-- Event 7 -->
+                    <div class="timeline-event group md:flex md:items-center md:justify-between relative z-10" style="animation-delay:600ms">
+                        <div class="md:w-1/2 md:pr-8 md:order-1 order-2">
+                            <div class="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700 relative">
+                                <div class="mb-4">
+                                    <img src="https://placehold.co/400x250?text=Event+7" alt="Event 7" class="rounded-lg w-full h-48 object-cover object-center shadow-md">
+                                </div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Event Title Seven</h3>
+                                <p class="text-slate-300 mb-2">A special event to remember. Change this text as you wish.</p>
+                                <p class="text-sm text-slate-400">July 2023</p>
+                                <div class="absolute left-1/2 bottom-0 w-1 h-8 bg-slate-700/40 -translate-x-1/2 z-0 md:hidden"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-12 order-1">
+                            <div class="w-6 h-6 bg-slate-900 border-4 border-slate-700 rounded-full z-10"></div>
+                        </div>
+                    </div>
+                    <!-- Event 8 -->
+                    <div class="timeline-event group md:flex md:items-center md:justify-between relative z-10 flex-row-reverse" style="animation-delay:700ms">
+                        <div class="md:w-1/2 md:pl-8 md:order-2 order-2">
+                            <div class="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700 relative">
+                                <div class="mb-4">
+                                    <img src="https://placehold.co/400x250?text=Event+8" alt="Event 8" class="rounded-lg w-full h-48 object-cover object-center shadow-md">
+                                </div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Event Title Eight</h3>
+                                <p class="text-slate-300 mb-2">Another event for your timeline. Edit this as needed.</p>
+                                <p class="text-sm text-slate-400">August 2023</p>
+                                <div class="absolute left-1/2 bottom-0 w-1 h-8 bg-slate-700/40 -translate-x-1/2 z-0 md:hidden"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-12 order-1">
+                            <div class="w-6 h-6 bg-slate-900 border-4 border-slate-700 rounded-full z-10"></div>
+                        </div>
+                    </div>
+                    <!-- Event 9 -->
+                    <div class="timeline-event group md:flex md:items-center md:justify-between relative z-10" style="animation-delay:800ms">
+                        <div class="md:w-1/2 md:pr-8 md:order-1 order-2">
+                            <div class="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700 relative">
+                                <div class="mb-4">
+                                    <img src="https://placehold.co/400x250?text=Event+9" alt="Event 9" class="rounded-lg w-full h-48 object-cover object-center shadow-md">
+                                </div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Event Title Nine</h3>
+                                <p class="text-slate-300 mb-2">Keep adding your memories here. This is your story!</p>
+                                <p class="text-sm text-slate-400">September 2023</p>
+                                <div class="absolute left-1/2 bottom-0 w-1 h-8 bg-slate-700/40 -translate-x-1/2 z-0 md:hidden"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-12 order-1">
+                            <div class="w-6 h-6 bg-slate-900 border-4 border-slate-700 rounded-full z-10"></div>
+                        </div>
+                    </div>
+                    <!-- Event 10 -->
+                    <div class="timeline-event group md:flex md:items-center md:justify-between relative z-10 flex-row-reverse" style="animation-delay:900ms">
+                        <div class="md:w-1/2 md:pl-8 md:order-2 order-2">
+                            <div class="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700 relative">
+                                <div class="mb-4">
+                                    <img src="https://placehold.co/400x250?text=Event+10" alt="Event 10" class="rounded-lg w-full h-48 object-cover object-center shadow-md">
+                                </div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Event Title Ten</h3>
+                                <p class="text-slate-300 mb-2">The last event in this example. You can add more or edit as you wish.</p>
+                                <p class="text-sm text-slate-400">October 2023</p>
+                                <!-- No line for last event -->
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-12 order-1">
+                            <div class="w-6 h-6 bg-slate-900 border-4 border-slate-700 rounded-full z-10"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .timeline-event {
+                opacity: 0;
+                transform: translateY(40px);
+                transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+            }
+            .timeline-event.visible {
+                opacity: 1;
+                transform: none;
+            }
+        </style>
+        <script>
+            // Simple intersection observer for timeline animation
+            document.addEventListener('DOMContentLoaded', function() {
+                const events = document.querySelectorAll('.timeline-event');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.2 });
+                events.forEach((el, idx) => {
+                    setTimeout(() => observer.observe(el), idx * 50);
+                });
+            });
+        </script>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-12 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-center mb-8 text-white">Memory Lane</h2>
+            <div class="grid grid-cols-1 gap-4">
+                <div class="gallery-item relative rounded-lg overflow-hidden">
+                    <img src="https://source.unsplash.com/random/800x600?programming" alt="Programming Class" class="w-full h-48 object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                        <h3 class="text-white font-semibold">Our First Code</h3>
+                    </div>
+                </div>
+                <div class="gallery-item relative rounded-lg overflow-hidden">
+                    <img src="https://source.unsplash.com/random/800x600?coding" alt="Coding Session" class="w-full h-48 object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                        <h3 class="text-white font-semibold">Team Collaboration</h3>
+                    </div>
+                </div>
+                <div class="gallery-item relative rounded-lg overflow-hidden">
+                    <img src="https://source.unsplash.com/random/800x600?computer-lab" alt="Computer Lab" class="w-full h-48 object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                        <h3 class="text-white font-semibold">Our Second Home</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-center mb-8 text-white">About Our Class</h2>
+            <div class="space-y-6">
+                <div class="bg-slate-800 p-4 rounded-lg shadow-md">
+                    <h3 class="text-lg font-semibold text-white mb-3">Our Story</h3>
+                    <p class="text-slate-300 text-sm mb-4">
+                        XI Software Engineering (RPL) is more than just a class - it's a family of 34 passionate individuals 
+                        bound by our love for technology. Together, we've shared countless moments of debugging, 
+                        celebrated project successes, and supported each other through coding challenges.
+                    </p>
+                    <div class="space-y-2">
+                        <p class="text-slate-300 text-sm"><span class="font-semibold">School:</span> SMK Labschool Pekanbaru</p>
+                        <p class="text-slate-300 text-sm"><span class="font-semibold">Family Members:</span> 34 Students</p>
+                        <p class="text-slate-300 text-sm"><span class="font-semibold">Academic Year:</span> 2023/2024</p>
+                    </div>
+                </div>
+                <div class="bg-slate-800 p-4 rounded-lg shadow-md">
+                    <h3 class="text-lg font-semibold text-white mb-3">Our Achievements</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-slate-300 text-sm">
+                            <span class="w-2 h-2 bg-slate-600 rounded-full mr-2"></span>
+                            Coming Soon
+                        </li>
+                        <li class="flex items-center text-slate-300 text-sm">
+                            <span class="w-2 h-2 bg-slate-600 rounded-full mr-2"></span>
+                            Coming Soon
+                        </li>
+                        <li class="flex items-center text-slate-300 text-sm">
+                            <span class="w-2 h-2 bg-slate-600 rounded-full mr-2"></span>
+                            Coming Soon
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-slate-300 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-sm">&copy; 2024 XI RPL - SMK Labschool Pekanbaru. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for mobile menu -->
+    <script>
+        const menuButton = document.getElementById('menuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking a link
+        const menuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of menuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+    </script>
+</body>
+</html> 
